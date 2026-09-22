@@ -15,7 +15,7 @@
 
 安装包在 **GitHub Releases** 页：
 
-👉 `https://github.com/<你的用户名>/pagebell/releases`
+
 
 （别人电脑上首次运行若弹 SmartScreen，点"更多信息 → 仍要运行"即可，安装包未做代码签名。）
 
@@ -44,9 +44,6 @@ pagebell-web/
 ```
 
 ## 技术栈
-
 网页（HTML / CSS / JS，玻璃质感 UI）+ Electron 桌面壳；NSIS 手写安装向导。
-
 ## 许可
-
-自用 / 学习用途。未声明开源许可证——如需分发或商用请先联系作者。
+MIT License —— 可自由使用、修改、分发、商用，只需保留版权声明与许可声明。
