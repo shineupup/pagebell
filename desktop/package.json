@@ -1,0 +1,9 @@
+{
+  "name": "pagebell",
+  "productName": "翻页提醒器",
+  "version": "1.0.0",
+  "description": "翻页提醒器桌面版 · 一按即响两声提示",
+  "main": "main.js",
+  "author": "Mayn",
+  "license": "MIT"
+}

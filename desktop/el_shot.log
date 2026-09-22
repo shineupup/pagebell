@@ -1,0 +1,12 @@
+
+[6716:0921/182208.004:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: 拒绝访问。 (0x5)
+[6716:0921/182208.004:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: 拒绝访问。 (0x5)
+[6716:0921/182208.004:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: 拒绝访问。 (0x5)
+[6716:0921/182208.047:ERROR:net\disk_cache\disk_cache.cc:284] Unable to create cache
+[6716:0921/182208.047:ERROR:gpu\ipc\host\gpu_disk_cache.cc:737] Gpu Cache Creation failed: -2
+[6716:0921/182208.047:ERROR:net\disk_cache\disk_cache.cc:284] Unable to create cache
+[6716:0921/182208.047:ERROR:gpu\ipc\host\gpu_disk_cache.cc:737] Gpu Cache Creation failed: -2
+[6716:0921/182208.047:ERROR:net\disk_cache\disk_cache.cc:284] Unable to create cache
+[6716:0921/182208.047:ERROR:gpu\ipc\host\gpu_disk_cache.cc:737] Gpu Cache Creation failed: -2
+[main] shot saved: C:/Users/Administrator/WorkBuddy/2026-09-19-15-16-07/output/ui_full2.png
+[main] mini shot saved: C:/Users/Administrator/WorkBuddy/2026-09-19-15-16-07/output/ui_mini.png

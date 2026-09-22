@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>翻页提醒器 · Pagebell</title>
+<meta name="description" content="翻页提醒器网页版：双声提示，随点随响。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="aurora" aria-hidden="true">
+  <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
+</div>
+
+<div class="breath" id="breath" aria-hidden="true"><i></i></div>
+<div class="ripple-layer" id="rippleLayer" aria-hidden="true"></div>
+
+<main class="stage" id="stage">
+
+  <!-- 迷你态拖动条（仅桌面版迷你时显示） -->
+  <div class="grab" id="grab" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <header class="topbar">
+    <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+    <h1 class="brand">翻页提醒器<em>Pagebell</em></h1>
+    <div class="topbar-tools">
+      <button class="ghost" id="btnTheme" title="切换主题（T）">夜间</button>
+      <button class="ghost" id="btnMini" title="迷你贴边（M）">迷你</button>
+      <button class="ghost" id="btnFull" title="全屏（F）">全屏</button>
+      <button class="ghost app-only" id="btnPin" title="窗口置顶">置顶</button>
+      <button class="app-min app-only" id="btnMin" title="最小化" aria-label="最小化">
+        <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.4 6h7.2" fill="none"
+          stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </button>
+      <button class="app-close app-only" id="btnClose" title="关闭" aria-label="关闭">✕</button>
+    </div>
+  </header>
+
+  <section class="deck">
+
+    <!-- 左：提醒 -->
+    <div class="panel side">
+      <button class="remind" id="btnRemind">
+        <span class="remind-main">提醒</span>
+        <span class="remind-sub">空格</span>
+      </button>
+      <button class="unfold" id="btnUnfold" title="展开参数" aria-label="展开参数">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 9.5 L12 15.5 L18 9.5" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- 右：参数 -->
+    <div class="panel console">
+
+      <div class="block">
+        <div class="eyebrow">音色</div>
+        <div class="chips" id="voices">
+          <button class="chip is-on" data-voice="beep">滴</button>
+          <button class="chip" data-voice="bell">铃</button>
+          <button class="chip" data-voice="wood">木</button>
+          <button class="chip" data-voice="piano">琴</button>
+          <button class="chip" data-voice="chime">风铃</button>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="field">
+          <div class="eyebrow">频率 <span class="val" id="valFreq">880 Hz</span></div>
+          <input type="range" id="rngFreq" min="300" max="2000" step="10" value="880">
+        </div>
+        <div class="field">
+          <div class="eyebrow">音量 <span class="val" id="valVol">70%</span></div>
+          <input type="range" id="rngVol" min="0" max="100" step="1" value="70">
+        </div>
+        <div class="field">
+          <div class="eyebrow">声数 <span class="val" id="valBeats">2 声</span></div>
+          <input type="range" id="rngBeats" min="1" max="3" step="1" value="2">
+        </div>
+        <div class="field">
+          <div class="eyebrow">静止隐藏 <span class="val" id="valIdle">2.5 秒</span></div>
+          <input type="range" id="rngIdle" min="1" max="10" step="0.5" value="2.5">
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="eyebrow">透明度 <span class="val" id="valOpacity">100%</span></div>
+        <input type="range" id="rngOpacity" min="0.3" max="1" step="0.05" value="1">
+      </div>
+
+      <div class="switches">
+        <label class="sw"><input type="checkbox" id="swRipple" checked><span>视觉涟漪</span><i></i></label>
+        <label class="sw"><input type="checkbox" id="swWake"><span>屏幕常亮</span><i></i></label>
+        <label class="sw"><input type="checkbox" id="swImmerse" checked><span>沉浸隐藏</span><i></i></label>
+      </div>
+
+    </div>
+  </section>
+
+  <span class="tick tl" aria-hidden="true"></span>
+  <span class="tick br" aria-hidden="true"></span>
+</main>
+
+<div class="audio-note" id="audioNote">轻触任意处启用声音</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
